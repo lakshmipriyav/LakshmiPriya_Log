@@ -11,9 +11,14 @@ public class housePriceTest {
 	public void test() {
 
 		housePrice h=new housePrice();
-		double cost=h.totalCost("standard",100.0);
-		
-		assertEquals(120000.0,cost,DELTA);
+		double cost1=h.totalCost("standard",100.0);
+		double cost2=h.totalCost("above standard",100.0);
+		double cost3=h.totalCost("high standard",100.0);
+		double cost4=h.totalCost("high standard and fully automated",100.0);
+		assertEquals(120000.0,cost1,DELTA);
+		assertEquals(150000.0,cost2,DELTA);
+		assertEquals(180000.0,cost3,DELTA);
+		assertEquals(250000.0,cost4,DELTA);
 	}
 	
 
